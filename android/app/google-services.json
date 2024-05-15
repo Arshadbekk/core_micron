@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "604667339525",
+    "project_id": "coremicron-12187",
+    "storage_bucket": "coremicron-12187.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604667339525:android:9afffaa65a8554710b0d6c",
+        "android_client_info": {
+          "package_name": "com.example.core_micron"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAETLgn88XXmOzNSjcp8MuYu7Iwamp4fk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
