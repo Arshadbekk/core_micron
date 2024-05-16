@@ -34,7 +34,7 @@ class _NewCardEntryState extends State<NewCardEntry> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: SizedBox(
-                                height: w * 0.15,
+                                height: w * 0.16,
                                 width: w * 0.5,
                                 child: DropdownButtonFormField(
                                   value: selectedMonth,

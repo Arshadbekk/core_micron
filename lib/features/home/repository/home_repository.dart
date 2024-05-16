@@ -88,16 +88,17 @@ class HomeRepository {
             .toList());
   }
 
-  Stream<List<EmployeeModel>> getEmployeesByMonth(DateTime month) {
-    print(month);
-    print(month.month);
-    print(month.day);
+  Stream<List<EmployeeModel>> getEmployeesByMonth(DateTime date) {
+    print(date);
+    print(date.month);
+    print(date.day);
+    DateTime newDate=DateTime(date.year, date.month+1,1,23,59,59);
+    newDate=newDate.subtract(Duration(days: 1));
     return _employees
         .where("delete", isEqualTo: false)
-        .where("createdTime", isGreaterThanOrEqualTo: DateTime(month.year,month.month,1,0,0,0))
+        .where("createdTime", isGreaterThanOrEqualTo: DateTime(date.year,date.month,1,0,0,0))
         .where("createdTime",
-            isLessThanOrEqualTo:
-                DateTime(month.year, month.month+1, month.subtract(Duration(days: 1)).day, 23, 59, 59))
+            isLessThanOrEqualTo:newDate)
         .snapshots()
         .map((event) => event.docs
             .map((e) => EmployeeModel.fromMap(e.data() as Map<String, dynamic>))
